@@ -40,10 +40,6 @@ apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
 - role: control-plane
   image: kindest/node:${K8S_VERSION}
-  extraPortMappings:
-  - containerPort: 31080 # expose port 31380 of the node to port 80 on the host, later to be use by kourier or contour ingress
-    listenAddress: 127.0.0.1
-    hostPort: 80
 EOF
 echo "Waiting on cluster to be ready..."
 sleep 10

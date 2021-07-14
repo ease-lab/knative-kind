@@ -4,10 +4,10 @@ set -eo pipefail
 
 echo -e "🍿 Installing Knative Serving and Eventing ... \033[0m"
 STARTTIME=$(date +%s)
-curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/install.sh | bash
+curl -sL https://raw.githubusercontent.com/ease-lab/knative-kind/ease-lab/install.sh | bash
 echo -e "🕹 Installing Knative Samples Apps... \033[0m"
-curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/03-serving-samples.sh | bash
-curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/05-eventing-samples.sh | bash
+curl -sL https://raw.githubusercontent.com/ease-lab/knative-kind/ease-lab/03-serving-samples.sh | bash
+curl -sL https://raw.githubusercontent.com/ease-lab/knative-kind/ease-lab/05-eventing-samples.sh | bash
 DURATION=$(($(date +%s) - $STARTTIME))
 echo "kubectl get ksvc,broker,trigger"
 kubectl -n default get ksvc,broker,trigger

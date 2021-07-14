@@ -42,7 +42,7 @@ docker version
 
 ## Create cluster with Kind
 
-TLDR; `curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/01-kind.sh | sh`
+TLDR; `curl -sL https://raw.githubusercontent.com/ease-lab/knative-kind/ease-lab/01-kind.sh | sh`
 
 1. Install or Upgrade [kind](https://github.com/kubernetes-sigs/kind/releases) Linux, MacOS, or Windows. Download kind binary and verify the version with
     ```bash
@@ -77,8 +77,8 @@ For more information installing or using kind checkout the docs https://kind.sig
 
 TLDR;
 ```
-curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/02-serving.sh | sh
-curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/02-kourier.sh | sh
+curl -sL https://raw.githubusercontent.com/ease-lab/knative-kind/ease-lab/02-serving.sh | sh
+curl -sL https://raw.githubusercontent.com/ease-lab/knative-kind/ease-lab/02-kourier.sh | sh
 ```
 
 1. Select the version of Knative Serving to install
@@ -253,7 +253,7 @@ Some people call this **Serverless** 🎉 🌮 🔥
 
 ## Install Knative Eventing
 
-TLDR; `curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/04-eventing.sh | sh`
+TLDR; `curl -sL https://raw.githubusercontent.com/ease-lab/knative-kind/ease-lab/04-eventing.sh | sh`
 
 1. Select the version of Knative Eventing to install
     ```bash
