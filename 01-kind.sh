@@ -51,8 +51,10 @@ nodes:
   image: kindest/node:${K8S_VERSION}
 containerdConfigPatches:
 - |-
-  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."localhost:${reg_port}"]
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."node-registry:${reg_port}"]
     endpoint = ["http://${reg_name}:${reg_port}"]
+    [plugins."io.containerd.grpc.v1.cri".registry.configs."node-registry:${reg_port}".tls]
+      insecure_skip_verify = true
 EOF
 echo "Waiting on cluster to be ready..."
 sleep 10
